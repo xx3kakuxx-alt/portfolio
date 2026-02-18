@@ -46,12 +46,19 @@ header {
     overflow: hidden; /* はみ出し防止 */
 }
 
+/* メインビジュアルのエリアを横幅いっぱいにする */
+.main_visual {
+    width: 100%;
+	display: flex;     /* 中央寄せしやすくする */
+    justify-content: center; /* 画像を真ん中に置く */
+}
+
 /* 中の画像を横幅に合わせて伸び縮みさせる */
 .main_visual img {
-    width: 100%;      /* 常に画面幅100%にする */
-    height: auto;     /* 比率を保って高さを自動調整 */
-    display: block;   /* 下の隙間を消す */
-    object-fit: cover; /* 画面にフィットさせる */
+	width: 100%;       /* 基本は100%（画面に合わせて縮む） */
+    max-width: 800px;  /* ここに好きな上限数値を指定（例：800px） */
+    height: auto;      /* 高さは自動調整 */
+    display: block;
 }
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
@@ -100,5 +107,6 @@ header {
     padding: 20px;
 }
 .item img { width: 300px; border-radius: 10px; }
+
 
 
