@@ -1,80 +1,86 @@
 @charset "utf-8";
 /* CSS Document */
-
-/* チェックボックスを隠す */
-#menu-btn-check {
-    display: none;
+/* 基本設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #ff5722; /* オレンジ色 */
 }
 
-@charset "utf-8";
-/* CSS Document */
-
-/* チェックボックスを隠す */
-#menu-btn-check {
-    display: none;
-}
-
-/* ハンバーガーアイコン（三本線）の見た目 */
-.menu-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+header {
     display: flex;
-    height: 40px;
-    width: 40px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    cursor: pointer;
+    padding: 20px 40px;
 }
 
-/* 三本線の棒のデザイン */
-.menu-btn span,
-.menu-btn span:before,
-.menu-btn span:after {
-    content: '';
-    display: block;
-    height: 2px;       /* 線の太さ */
-    width: 28px;       /* 線の長さ */
-    background-color: #ff5722; /* オレンジ色 */
-    position: absolute;
-    transition: all 0.3s;
-}
+.logo h1 { margin: 0; font-size: 20px; }
+.logo p { margin: 0; font-size: 14px; }
 
-.menu-btn span:before { bottom: 8px; }
-.menu-btn span:after { top: 8px; }
-
-/* メニューの内容を最初は隠しておく（右側に飛ばしておく） */
+/* メニューのリスト設定 */
 .menu-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 100%; /* 画面の外へ */
-    z-index: 80;
-    background-color: #3584bb;
-    transition: all 0.5s; /* アニメーション速度 */
+    display: flex; /* PCでは横並び */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* チェックが入ったら（クリックされたら）メニューを画面内に戻す */
-#menu-btn-check:checked ~ .menu-content {
-    left: 0;
+.menu-content li a {
+    text-decoration: none;
+    color: #ff5722;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
-/* メニューの内容を最初は隠しておく（右側に飛ばしておく） */
-.menu-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 100%; /* 画面の外へ */
-    z-index: 80;
-    background-color: #3584bb;
-    transition: all 0.5s; /* アニメーション速度 */
+/* スマホ用ボタンはPCでは隠す */
+.menu-btn, #menu-btn-check {
+    display: none;
 }
 
-/* チェックが入ったら（クリックされたら）メニューを画面内に戻す */
-#menu-btn-check:checked ~ .menu-content {
-    left: 0;
+/* --- スマホ用の設定（画面幅が768px以下のとき） --- */
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: flex; /* スマホの時だけ表示 */
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    .menu-btn span, .menu-btn span:before, .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 25px;
+        background-color: #ff5722;
+        position: absolute;
+    }
+    .menu-btn span:before { bottom: 8px; }
+    .menu-btn span:after { top: 8px; }
 
+    .menu-content {
+        display: block; /* 縦並びに変更 */
+        position: fixed;
+        top: 0;
+        left: 100%; /* 画面の外へ */
+        width: 100%;
+        height: 100vh;
+        background: rgba(255,255,255,0.95);
+        padding-top: 80px;
+        transition: 0.5s;
+    }
+
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0; /* クリックで出てくる */
+    }
 }
+
+/* イラストギャラリーの簡易設定 */
+.section-title { text-align: center; font-size: 40px; }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.item img { width: 300px; border-radius: 10px; }
