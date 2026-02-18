@@ -38,11 +38,20 @@ header {
     display: none;
 }
 
-.main_visual img
-{width: 100%;      /* 親要素の幅いっぱいに広げる */
-    height: auto;     /* 高さを自動調整して比率を保つ */
-    display: block;   /* 下にできる謎の隙間を消す */
-    object-fit: cover; /* 画像の比率を保ったまま枠を埋める */
+/* メインビジュアルのエリアを横幅いっぱいにする */
+.main_visual {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* はみ出し防止 */
+}
+
+/* 中の画像を横幅に合わせて伸び縮みさせる */
+.main_visual img {
+    width: 100%;      /* 常に画面幅100%にする */
+    height: auto;     /* 比率を保って高さを自動調整 */
+    display: block;   /* 下の隙間を消す */
+    object-fit: cover; /* 画面にフィットさせる */
 }
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
@@ -91,4 +100,5 @@ header {
     padding: 20px;
 }
 .item img { width: 300px; border-radius: 10px; }
+
 
