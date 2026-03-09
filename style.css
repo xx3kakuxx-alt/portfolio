@@ -18,7 +18,6 @@ header {
 .logo h1 { margin: 0; font-size: 20px; }
 .logo p { margin: 0; font-size: 14px; }
 
-/* メニューのリスト設定 */
 .menu-content {
     display: flex; /* PCでは横並び */
     list-style: none;
@@ -33,38 +32,60 @@ header {
     font-weight: bold;
 }
 
-/* スマホ用ボタンはPCでは隠す */
 .menu-btn, #menu-btn-check {
     display: none;
 }
 
-/* メインビジュアルのエリアを横幅いっぱいにする */
 .main_visual {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* はみ出し防止 */
+    overflow: hidden;
 }
 
-/* メインビジュアルのエリアを横幅いっぱいにする */
 .main_visual {
     width: 100%;
-	display: flex;     /* 中央寄せしやすくする */
-    justify-content: center; /* 画像を真ん中に置く */
+	display: flex;
+    justify-content: center;
 }
 
-/* 中の画像を横幅に合わせて伸び縮みさせる */
 .main_visual img {
-	width: 100%;       /* 基本は100%（画面に合わせて縮む） */
-    max-width: 800px;  /* ここに好きな上限数値を指定（例：800px） */
-    height: auto;      /* 高さは自動調整 */
+	width: 100%;
+    max-width: 800px;
+    height: auto;
     display: block;
+}
+
+.main_section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.main_img img {
+    width: 100%;
+    max-width: 500px;       
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.main_text {
+    text-align: center;
+    color: #ff7f50;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-top: -20px;
 }
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
 @media screen and (max-width: 768px) {
     .menu-btn {
-        display: flex; /* スマホの時だけ表示 */
+        display: flex;
         z-index: 100;
         cursor: pointer;
     }
@@ -81,10 +102,10 @@ header {
     .menu-btn span:after { top: 8px; }
 
     .menu-content {
-        display: block; /* 縦並びに変更 */
+        display: block;
         position: fixed;
         top: 0;
-        left: 100%; /* 画面の外へ */
+        left: 100%;
         width: 100%;
         height: 100vh;
         background: rgba(255,255,255,0.95);
@@ -93,11 +114,10 @@ header {
     }
 
     #menu-btn-check:checked ~ .menu-content {
-        left: 0; /* クリックで出てくる */
+        left: 0;
     }
 }
 
-/* イラストギャラリーの簡易設定 */
 .section-title { text-align: center; font-size: 40px; }
 .gallery {
     display: flex;
@@ -107,6 +127,7 @@ header {
     padding: 20px;
 }
 .item img { width: 300px; border-radius: 10px; }
+
 
 
 
