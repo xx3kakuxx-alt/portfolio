@@ -55,56 +55,57 @@ header {
     height: auto;
     display: block;
 }
-
 /* ベースとなる画像グループの枠 */
 .image-group {
     display: flex;
-    flex-wrap: wrap;       /* 入りきらない分は折り返す */
-    justify-content: center; /* 中央寄せ */
-    gap: 20px;             /* 画像同士の隙間 */
+    flex-wrap: wrap;
+    justify-content: center; /* 横方向の中央寄せ */
+    align-items: flex-start; /* 縦方向の上揃え */
+    gap: 20px;
     padding: 20px;
-    max-width: 1000px;     /* 全体の最大幅 */
-    margin: 0 auto;        /* 枠自体を画面中央に */
+    width: 100%;             /* 画面幅いっぱいに広げる */
+    max-width: 1000px;
+    margin: 0 auto;          /* 枠自体を画面の中央に */
     box-sizing: border-box;
 }
 
-/* 画像を囲む箱（共通設定） */
+/* 画像を囲む箱 */
 .image-group .item {
-    display: block;
+    display: flex;
+    justify-content: center; /* 箱の中でも中央寄せ */
 }
 
-/* 画像本体（共通設定） */
+/* 画像本体 */
 .image-group .item img {
-    width: 100%;           /* 箱の幅いっぱいに広げる */
+    width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;    /* 角を丸くする（任意） */
+    border-radius: 8px;
 }
 
-/* 説明テキスト（共通設定） */
-.image-group .group-text {
-    width: 100%;           /* テキストは横幅いっぱい */
-    text-align: center;    /* 文字も中央寄せ */
-    margin-top: 15px;
-    margin-bottom: 40px;   /* 次のグループとの間隔 */
-}
-
-/* --- ここから使い分け用の設定 --- */
+/* --- 使い分け用の設定 --- */
 
 /* 【1枚大きく表示したいグループ】 */
 .image-group.single .item {
-    width: 100%;           /* 横幅いっぱい */
-    max-width: 600px;      /* 大きくなりすぎないように制限（お好みで調整） */
+    width: 100%;
+    max-width: 600px; /* ここでお好みの大きさに制限 */
+    margin: 0 auto;   /* 1枚のときも中央に */
 }
 
-/* 【2枚ずつ並べたいグループ】 */
+/* 【2枚並べたいグループ】 */
 .image-group.double .item {
-    width: calc(50% - 10px); /* 横幅を約半分に（gapの半分を引く） */
-    min-width: 300px;        /* スマホで小さくなりすぎないように */
+    /* 画面幅が狭いときも考慮して calc を調整 */
+    width: calc(50% - 15px); 
+    min-width: 300px;
 }
 
-
-
+/* 説明テキスト */
+.image-group .group-text {
+    width: 100%;
+    text-align: center; /* 文字を中央寄せ */
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
 @media screen and (max-width: 768px) {
