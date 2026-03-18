@@ -14,14 +14,15 @@
     }
 }
 
-/* 1. まだ見えていない時の状態 */
+/* --- スクロールアニメーション用 --- */
+/* 1. 最初は透明にして、少し下に下げておく */
 .js-fade {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1.0s ease-out, transform 1.0s ease-out;
 }
 
-/* 2. 画面に入った時の状態 */
+/* 2. 画面内に入ったらこのクラスを付けて表示させる */
 .js-fade.is-visible {
     opacity: 1;
     transform: translateY(0);
