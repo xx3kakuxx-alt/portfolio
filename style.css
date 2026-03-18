@@ -55,56 +55,56 @@ header {
     height: auto;
     display: block;
 }
-/* ベースとなる画像グループの枠 */
-.image-group {
+/* ベースの枠組み：中身を中央に寄せる */
+.main_section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* 横方向の中央寄せ */
-    align-items: flex-start; /* 縦方向の上揃え */
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px;
-    width: 100%;             /* 画面幅いっぱいに広げる */
     max-width: 1000px;
-    margin: 0 auto;          /* 枠自体を画面の中央に */
+    margin: 0 auto;         /* 枠自体を画面の中央に */
+    padding: 20px;
     box-sizing: border-box;
 }
 
-/* 画像を囲む箱 */
-.image-group .item {
+/* 画像を囲む箱（共通） */
+.main_img {
     display: flex;
-    justify-content: center; /* 箱の中でも中央寄せ */
+    justify-content: center;
 }
 
-/* 画像本体 */
-.image-group .item img {
+/* 画像本体（共通） */
+.main_img img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
 }
 
-/* --- 使い分け用の設定 --- */
+/* --- 使い分けの設定 --- */
 
-/* 【1枚大きく表示したいグループ】 */
-.image-group.single .item {
+/* 【1枚大きく中央に置きたい場合】 */
+/* HTMLで <div class="main_section single"> と書く */
+.main_section.single .main_img {
+    width: 100%;       /* 1枚で横幅いっぱい使う */
+    max-width: 600px;  /* 大きくなりすぎないように制限 */
+    margin: 0 auto;    /* 中央寄せ */
+}
+
+/* 【2枚横並びにしたい場合】 */
+/* HTMLで <div class="main_section double"> と書く */
+.main_section.double .main_img {
+    width: calc(50% - 10px); /* 横幅を半分にする */
+    min-width: 300px;        /* スマホで小さくなりすぎないように */
+}
+
+/* 説明テキスト：常に中央寄せ */
+.main_text {
     width: 100%;
-    max-width: 600px; /* ここでお好みの大きさに制限 */
-    margin: 0 auto;   /* 1枚のときも中央に */
-}
-
-/* 【2枚並べたいグループ】 */
-.image-group.double .item {
-    /* 画面幅が狭いときも考慮して calc を調整 */
-    width: calc(50% - 15px); 
-    min-width: 300px;
-}
-
-/* 説明テキスト */
-.image-group .group-text {
-    width: 100%;
-    text-align: center; /* 文字を中央寄せ */
+    text-align: center;
     margin-top: 15px;
     margin-bottom: 40px;
+    color: #ff8c42; /* 今のサイトの色に合わせています */
 }
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
