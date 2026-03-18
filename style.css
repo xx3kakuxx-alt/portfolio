@@ -56,40 +56,51 @@ header {
     display: block;
 }
 
-
-/* 外側の枠：中身を横並びにして中央に寄せる */
-.main_section {
+/* ベースとなる画像グループの枠 */
+.image-group {
     display: flex;
-    flex-wrap: wrap;       /* 2枚並んだら折り返す */
-    justify-content: center; /* 【重要】中身を中央に寄せる */
+    flex-wrap: wrap;       /* 入りきらない分は折り返す */
+    justify-content: center; /* 中央寄せ */
+    gap: 20px;             /* 画像同士の隙間 */
     padding: 20px;
-    max-width: 800px;     /* 全体の最大幅（お好みで調整） */
-    margin: 0 auto;        /* 【重要】枠自体を画面の中央に置く */
+    max-width: 1000px;     /* 全体の最大幅 */
+    margin: 0 auto;        /* 枠自体を画面中央に */
+    box-sizing: border-box;
 }
 
-/* 画像を囲っている箱（.main_img や .item） */
-.main_img, .item {
-    padding: 20px;
-    min-width: 300px;        /* スマホで小さくなりすぎないように */
+/* 画像を囲む箱（共通設定） */
+.image-group .item {
+    display: block;
 }
 
-/* 画像本体 */
-.main_img img, .item img {
-    width: 100%;             /* 箱の幅いっぱいに広げる */
+/* 画像本体（共通設定） */
+.image-group .item img {
+    width: 100%;           /* 箱の幅いっぱいに広げる */
     height: auto;
     display: block;
-    border-radius: 8px;      /* 角を少し丸くすると綺麗です（任意） */
+    border-radius: 8px;    /* 角を丸くする（任意） */
 }
 
-/* 説明文：画像2枚の下に横いっぱいに表示 */
-.main_text {
-    width: 100%;
-	color: #ff7f50;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: center;      /* 文字も中央寄せ */
-    margin-top: 10px;
-    margin-bottom: 40px;     /* 次のセットとの間隔 */
+/* 説明テキスト（共通設定） */
+.image-group .group-text {
+    width: 100%;           /* テキストは横幅いっぱい */
+    text-align: center;    /* 文字も中央寄せ */
+    margin-top: 15px;
+    margin-bottom: 40px;   /* 次のグループとの間隔 */
+}
+
+/* --- ここから使い分け用の設定 --- */
+
+/* 【1枚大きく表示したいグループ】 */
+.image-group.single .item {
+    width: 100%;           /* 横幅いっぱい */
+    max-width: 600px;      /* 大きくなりすぎないように制限（お好みで調整） */
+}
+
+/* 【2枚ずつ並べたいグループ】 */
+.image-group.double .item {
+    width: calc(50% - 10px); /* 横幅を約半分に（gapの半分を引く） */
+    min-width: 300px;        /* スマホで小さくなりすぎないように */
 }
 
 
