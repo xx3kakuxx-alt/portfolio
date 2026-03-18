@@ -93,21 +93,38 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(target);
     });
 });
+<script>
+// --- 1. スクロールでふわっと出す機能 ---
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, {
+    threshold: 0.1 // 10%見えたら実行
+});
 
+// ページ読み込み時に js-fade クラスがついた要素を監視開始
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.js-fade').forEach(el => {
+        observer.observe(el);
+    });
+});
 
-    <script>
-    function openModal(element) {
-        var modal = document.getElementById("modal-container");
-        var modalImg = document.getElementById("modal-img");
-        modal.style.display = "flex"; 
-        modalImg.src = element.src;   
-    }
+// --- 2. 画像を大きくする機能（前回の続き） ---
+function openModal(element) {
+    var modal = document.getElementById("modal-container");
+    var modalImg = document.getElementById("modal-img");
+    modal.style.display = "flex"; 
+    modalImg.src = element.src;   
+}
 
-    function closeModal() {
-        var modal = document.getElementById("modal-container");
-        modal.style.display = "none"; 
-    }
-    </script>
+function closeModal() {
+    var modal = document.getElementById("modal-container");
+    modal.style.display = "none"; 
+}
+</script>
 </body>
 
 
