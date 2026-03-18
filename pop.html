@@ -67,7 +67,33 @@
 <div id="modal-container" onclick="closeModal()" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor: pointer; justify-content: center; align-items: center;">
         <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold;">&times;</span>
         <img id="modal-img" style="max-width: 90%; max-height: 90%; border: 3px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); object-fit: contain;">
-    </div>
+    </div><script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. ふわっとさせたい要素を自動で選ぶ（タイトル、画像セクション、テキストなど）
+    const targets = document.querySelectorAll('.section-title, .main_section, .main_text');
+    
+    // 2. それらにアニメーション用のクラスを自動でつける
+    targets.forEach(target => {
+        target.classList.add('js-fade');
+    });
+
+    // 3. スクロールを監視して表示させる設定
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.1 // 10%見えたら実行
+    });
+
+    // 監視を開始
+    targets.forEach(target => {
+        observer.observe(target);
+    });
+});
+
 
     <script>
     function openModal(element) {
