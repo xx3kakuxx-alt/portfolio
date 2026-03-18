@@ -68,7 +68,7 @@ header {
 
 /* 画像を囲っている箱（.main_img や .item） */
 .main_img, .item {
-    width: calc(50% - 20px); /* 【重要】横幅を「半分弱」にする */
+    padding: 20px;
     min-width: 300px;        /* スマホで小さくなりすぎないように */
 }
 
