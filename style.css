@@ -32,6 +32,16 @@ header {
     justify-content: center;
     align-items: center;
 }
+/* 閉じるボタンのデザイン */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 /* 拡大された画像 */
 #modal-img {
