@@ -56,21 +56,25 @@ header {
     display: block;
 }
 
+/* 親要素：中身を横並びにする */
 .main_section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
+    flex-wrap: wrap;       /* 入りきらない分は下に送る */
+    justify-content: space-between; /* 2枚を左右に振り分ける */
+    gap: 20px;             /* 画像の間の隙間 */
+    margin-bottom: 50px;   /* セットごとの間隔 */
 }
 
-.main_img img {
-    width: calc(50% - 20px);
-    max-width: 400px;
+/* 画像を包む箱：横幅を48%（約半分）にする */
+.main_section .item {
+    width: 48%;
+}
+
+/* 画像本体：箱の幅いっぱいに広げる */
+.main_section .item img {
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0;
 }
 
 
@@ -79,8 +83,8 @@ header {
     color: #ff7f50;
     font-size: 16px;
     line-height: 1.8;
-    max-width: 600px;
-    margin-top: -20px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
