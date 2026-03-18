@@ -56,36 +56,43 @@ header {
     display: block;
 }
 
-/* 親要素：中身を横並びにする */
+/* 外側の枠：中身を横並びにして中央に寄せる */
 .main_section {
     display: flex;
-    flex-wrap: wrap;       /* 入りきらない分は下に送る */
-    justify-content: space-between; /* 2枚を左右に振り分ける */
-    gap: 20px;             /* 画像の間の隙間 */
-    margin-bottom: 50px;   /* セットごとの間隔 */
+    flex-wrap: wrap;       /* 2枚並んだら折り返す */
+    justify-content: center; /* 【重要】中身を中央に寄せる */
+    gap: 20px;             /* 画像同士のすき間 */
+    padding: 20px;
+    max-width: 1000px;     /* 全体の最大幅（お好みで調整） */
+    margin: 0 auto;        /* 【重要】枠自体を画面の中央に置く */
 }
 
-/* 画像を包む箱：横幅を48%（約半分）にする */
-.main_section .item {
-    width: 48%;
+/* 画像を囲っている箱（.main_img や .item） */
+.main_img, .item {
+    width: calc(50% - 20px); /* 【重要】横幅を「半分弱」にする */
+    min-width: 300px;        /* スマホで小さくなりすぎないように */
 }
 
-/* 画像本体：箱の幅いっぱいに広げる */
-.main_section .item img {
-    width: 100%;
+/* 画像本体 */
+.main_img img, .item img {
+    width: 100%;             /* 箱の幅いっぱいに広げる */
     height: auto;
     display: block;
+    border-radius: 8px;      /* 角を少し丸くすると綺麗です（任意） */
 }
 
-
+/* 説明文：画像2枚の下に横いっぱいに表示 */
 .main_text {
-    text-align: center;
-    color: #ff7f50;
+    width: 100%;
+	color: #ff7f50;
     font-size: 16px;
     line-height: 1.8;
-    width: 100%;
+    text-align: center;      /* 文字も中央寄せ */
     margin-top: 10px;
+    margin-bottom: 40px;     /* 次のセットとの間隔 */
 }
+
+
 
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
 @media screen and (max-width: 768px) {
