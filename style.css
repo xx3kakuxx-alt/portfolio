@@ -56,6 +56,7 @@ header {
     display: block;
 }
 
+
 /* 外側の枠：中身を横並びにして中央に寄せる */
 .main_section {
     display: flex;
@@ -90,6 +91,7 @@ header {
     margin-top: 10px;
     margin-bottom: 40px;     /* 次のセットとの間隔 */
 }
+
 
 
 
