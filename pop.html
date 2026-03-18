@@ -40,7 +40,7 @@
 
 <div class="main_section single">
     <div class="main_img">
-        <img src="tsukemen.jpg"onclick="openModal(this)">
+        <img src="tsukemen.jpg" alt="tsukemen" onclick="openModal(this)">
     </div>
     <p class="main_text">説明文...</p>
 </div>
@@ -53,6 +53,19 @@
 
 
 </main>
+
+	<div id="modal-container" onclick="this.style.display='none'" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); cursor: zoom-out; justify-content: center; align-items: center;">
+    <img id="modal-img" style="max-width: 90%; max-height: 90%; border: 3px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+</div>
+
+<script>
+function openModal(element) {
+    const modal = document.getElementById("modal-container");
+    const modalImg = document.getElementById("modal-img");
+    modal.style.display = "flex"; // 黒い画面を表示
+    modalImg.src = element.src;   // クリックした画像をセット
+}
+</script>
 </body>
 
 
