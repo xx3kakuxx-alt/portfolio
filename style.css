@@ -176,6 +176,49 @@ header {
     color: #ff8c42; /* 今のサイトの色に合わせています */
 }
 
+
+/* フォントと色の定義（サイトの既存スタイルに合わせる） */
+.work-card {
+  /* サイトで指定されているフォントを継承 */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  width: calc((100% - 40px) / 3);
+  min-width: 280px;
+  margin-bottom: 40px;
+}
+
+/* タイトル部分：サイトのテキスト色に合わせる */
+.work-title {
+  font-size: 24px;
+  color: #333; /* サイトの基本文字色 */
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  border-bottom: 2px solid #333;
+}
+
+/* オレンジのカテゴリタグ：サイトのアクセントカラーに合わせる */
+.tag {
+  background-color: #f39800; /* サイトのメインのオレンジ色 */
+  color: #fff;
+  padding: 2px 12px;
+  border-radius: 15px; /* サイトの雰囲気に合わせた丸み */
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* 画像の下の余白調整 */
+.work-info {
+  padding-top: 10px;
+}
+
+.category-tags {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
 /* --- スマホ用の設定（画面幅が768px以下のとき） --- */
 @media screen and (max-width: 768px) {
     .menu-btn {
