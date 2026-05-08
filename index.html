@@ -39,33 +39,51 @@
 		<div class="main_visual"><img src="nekonomiyaki.jpg" alt="作品1"></div>
         <h2 class="section-title">works</h2>
 <section id="works">
-  <h2>works</h2>
-  <div class="works-container">
+  <div class="inner">
+    <h2>WORKS</h2>
     
-    <article class="work-card">
-      <div class="work-image">
-        </div>
-      <div class="work-info">
-        <h3 class="work-title">POP01</h3>
-        <div class="category-tags">
-          <span class="tag">web</span>
-        </div>
-      </div>
-    </article>
+    <div class="works-container">
+      
+      <article class="work-card">
+        <button class="modal-open-btn" onclick="document.getElementById('modal01').showModal()">
+          <div class="work-image-wrapper">
+            <img src="path/to/your/thumbnail01.jpg" alt="POP01 サムネイル" class="work-thumb">
+          </div>
+          <div class="work-info-mini">
+            <h3 class="work-title">POP01</h3>
+            <div class="category-tags">
+              <span class="tag">web</span>
+            </div>
+          </div>
+        </button>
 
-    <article class="work-card">
-      <div class="work-image"></div>
-      <div class="work-info">
-        <h3 class="work-title">POP02</h3>
-        <div class="category-tags">
-          <span class="tag">イラスト</span>
-          <span class="tag">POP</span>
-        </div>
-      </div>
-    </article>
+        <dialog id="modal01" class="work-modal">
+          <div class="modal-content">
+            <button class="modal-close-btn" onclick="document.getElementById('modal01').close()">×</button>
+            
+            <div class="modal-body">
+              <img src="path/to/your/large-image01.jpg" alt="POP01 詳細画像" class="modal-main-img">
+              <div class="modal-text">
+                <h3>POP01</h3>
+                <div class="category-tags">
+                  <span class="tag">web</span>
+                </div>
+                <p>作品の詳細な説明文がここに入ります。制作期間、使用ツールなど。</p>
+                <a href="#" class="btn-link">サイトを見る</a>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </article>
+      
+      <article class="work-card">
+        <button class="modal-open-btn" onclick="document.getElementById('modal02').showModal()">
+          </button>
+        <dialog id="modal02" class="work-modal">
+          </dialog>
+      </article>
 
-    </div>
-</section>
+    </div></div></section>
     </main>
 </body>
 
