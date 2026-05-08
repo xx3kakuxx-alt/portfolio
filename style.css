@@ -114,7 +114,7 @@ header {
     margin-bottom: 15px;
     overflow: hidden;
     border-radius: 5px;
-   border: 3px solid #ff5722; /* 太さ 3px、種類 実線、色 オレンジ */
+   border: 2px solid #ff5722; /* 太さ 3px、種類 実線、色 オレンジ */
   box-sizing: border-box;    /* 枠線を内側に含める設定（崩れ防止） */
 }
 
