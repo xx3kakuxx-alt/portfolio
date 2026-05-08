@@ -1,43 +1,36 @@
 @charset "utf-8";
-/* CSS Document */
-/* 基本設定 */
 
-/* ページ全体をふわっとさせるアニメーション */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* 20px下から開始 */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);    /* 元の位置へ */
-    }
+/* =========================================
+   1. 基本設定と共通アニメーション
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    /* フォントを統一 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #ff5722; /* サイトの基本オレンジ色 */
+    animation: fadeInUp 1.2s ease-out;
 }
 
-/* --- スクロールアニメーション用 --- */
-/* 1. 最初は透明にして、少し下に下げておく */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* スクロールフェード用 */
 .js-fade {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1.0s ease-out, transform 1.0s ease-out;
 }
-
-/* 2. 画面内に入ったらこのクラスを付けて表示させる */
 .js-fade.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-body {
-    animation: fadeInUp 1.2s ease-out; /* 1.2秒かけて実行 */
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    color: #ff5722; /* オレンジ色 */
-}
-
+/* =========================================
+   2. ヘッダー・ナビゲーション
+   ========================================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -48,47 +41,8 @@ header {
 .logo h1 { margin: 0; font-size: 20px; }
 .logo p { margin: 0; font-size: 14px; }
 
-/* 拡大画面（最初は隠しておく） */
-#modal-container {
-    display: none;      /* 普段は非表示 */
-    position: fixed;    /* 画面に固定 */
-    z-index: 9999;      /* 一番手前に表示 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 背景を半透明の黒に */
-    cursor: zoom-out;
-    justify-content: center;
-    align-items: center;
-}
-/* 閉じるボタンのデザイン */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* 拡大された画像 */
-#modal-img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 3px solid white;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    animation: zoom 0.3s; /* ふわっと出すアニメーション */
-}
-
-@keyframes zoom {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
 .menu-content {
-    display: flex; /* PCでは横並び */
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -101,314 +55,179 @@ header {
     font-weight: bold;
 }
 
-.menu-btn, #menu-btn-check {
-    display: none;
-}
-
+/* =========================================
+   3. メインビジュアル・WORKSレイアウト
+   ========================================= */
 .main_visual {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.main_visual {
-    width: 100%;
-	display: flex;
+    display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .main_visual img {
-	width: 100%;
+    width: 100%;
     max-width: 800px;
     height: auto;
     display: block;
 }
-/* ベースの枠組み：中身を中央に寄せる */
-.main_section {
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* 作品を包む親要素（3列に並べる） */
+.works-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 横方向の中央寄せ */
-    align-items: flex-start;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;         /* 枠自体を画面の中央に */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* 画像を囲む箱（共通） */
-.main_img {
-    display: flex;
+    gap: 40px 20px; /* 縦・横の隙間 */
     justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* 画像本体（共通） */
-.main_img img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* --- 使い分けの設定 --- */
-
-/* 【1枚大きく中央に置きたい場合】 */
-/* HTMLで <div class="main_section single"> と書く */
-.main_section.single .main_img {
-    width: 100%;       /* 1枚で横幅いっぱい使う */
-    max-width: 600px;  /* 大きくなりすぎないように制限 */
-    margin: 0 auto;    /* 中央寄せ */
-}
-
-/* 【2枚横並びにしたい場合】 */
-/* HTMLで <div class="main_section double"> と書く */
-.main_section.double .main_img {
-    width: calc(50% - 10px); /* 横幅を半分にする */
-    min-width: 300px;        /* スマホで小さくなりすぎないように */
-}
-
-/* 説明テキスト：常に中央寄せ */
-.main_text {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 40px;
-    color: #ff8c42; /* 今のサイトの色に合わせています */
-}
-
-
-/* フォントと色の定義（サイトの既存スタイルに合わせる） */
+/* 各作品カード */
 .work-card {
-  /* サイトで指定されているフォントを継承 */
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  width: calc((100% - 40px) / 3);
-  min-width: 280px;
-  margin-bottom: 40px;
+    width: calc((100% - 40px) / 3); /* 3列計算 */
+    min-width: 280px;
+    margin-bottom: 20px;
 }
 
-/* タイトル部分：サイトのテキスト色に合わせる */
-.work-title {
-  font-size: 24px;
-  color: #333; /* サイトの基本文字色 */
-  margin: 0;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  border-bottom: 2px solid #333;
-}
-
-/* オレンジのカテゴリタグ：サイトのアクセントカラーに合わせる */
-.tag {
-  background-color: #f39800; /* サイトのメインのオレンジ色 */
-  color: #fff;
-  padding: 2px 12px;
-  border-radius: 15px; /* サイトの雰囲気に合わせた丸み */
-  font-size: 12px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-/* 画像の下の余白調整 */
-.work-info {
-  padding-top: 10px;
-}
-
-.category-tags {
-  display: flex;
-  gap: 5px;
-  margin-top: 8px;
-}
-
-/* 親コンテナにFlexboxを適用 */
-.works-container {
-  display: flex;
-  flex-wrap: wrap; /* 折り返しを許可 */
-  gap: 30px; /* カード間の隙間 */
-  justify-content: flex-start; /* 左寄せで並べる */
-  margin-top: 40px;
-}
-
-/* 各作品カード（3カラムにする） */
-.work-card {
-  /* 画面幅に合わせて3等分（隙間を考慮） */
-  width: calc((100% - 60px) / 3); 
-  min-width: 280px; /* スマホ時の最小幅 */
-}
-
-/* サムネイルを開くボタン（見た目をリセット） */
+/* サムネイルを開くボタン */
 .modal-open-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  width: 100%;
-  text-align: left; /* テキストを左寄せに */
-  font-family: inherit; /* フォントを継承 */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
 }
 
-/* サムネイル画像枠 */
+/* 画像枠（2枚目のデザイン：クリーム色の部分） */
 .work-image-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* 正方形 */
-  background-color: #f7f7f7; /* 画像がない時の色 */
-  margin-bottom: 15px;
-  overflow: hidden;
-  border-radius: 5px; /* 少し角を丸く */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #fff9d7; /* 指定のクリーム色 */
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .work-thumb {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 枠に合わせてトリミング */
-  transition: transform 0.3s ease; /* ホバー時の動き */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* ホバー時に画像を少し拡大 */
 .modal-open-btn:hover .work-thumb {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-/* すでにある .work-title や .tag のスタイルはそのまま活かす */
-/* サムネイル内のフォントサイズなどを微調整 */
-.work-info-mini .work-title {
-  font-size: 18px; /* 少し小さく */
-}
-.work-info-mini .category-tags {
-  margin-top: 5px;
+/* 作品タイトル（下線あり） */
+.work-title {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid #333;
 }
 
+/* カテゴリタグ（サイトのオレンジに合わせる） */
+.category-tags {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: #ff5722; /* サイト全体のオレンジと統一 */
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-block;
+}
 
 /* =========================================
-   ポップアップ（モーダル）
+   4. ポップアップ（モーダル）
    ========================================= */
-
-/* `<dialog>` タグの基本スタイル */
 .work-modal {
-  border: none;
-  border-radius: 10px;
-  padding: 0;
-  max-width: 800px; /* ポップアップの最大幅 */
-  width: 90%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* ポップアップが開いた時の背景（オーバーレイ） */
 .work-modal::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* ポップアップ内部のレイアウト */
 .modal-content {
-  position: relative;
-  padding: 40px;
+    position: relative;
+    padding: 40px;
 }
 
-/* 閉じるボタン */
 .modal-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: #999;
-  cursor: pointer;
-}
-.modal-close-btn:hover {
-  color: #333;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #999;
+    cursor: pointer;
 }
 
-/* ポップアップ内のコンテンツ配置（横並び） */
 .modal-body {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-/* スマホでは縦並びに */
-@media (max-width: 768px) {
-  .modal-body {
-    flex-direction: column;
-  }
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .modal-main-img {
-  width: 50%; /* 左側半分 */
-  height: auto;
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  .modal-main-img {
-    width: 100%;
-  }
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .modal-text {
-  width: 50%; /* 右側半分 */
-}
-@media (max-width: 768px) {
-  .modal-text {
-    width: 100%;
-  }
+    width: 50%;
+    color: #333; /* ポップアップ内は読みやすく暗めの色に */
 }
 
-.modal-text h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+.modal-text h3 { margin: 0 0 10px 0; font-size: 24px; }
+.modal-text p { line-height: 1.6; margin-top: 15px; }
 
-.modal-text p {
-  margin-top: 20px;
-  line-height: 1.6;
-  color: #666;
-}
-
-/* --- スマホ用の設定（画面幅が768px以下のとき） --- */
+/* =========================================
+   5. スマホ対応
+   ========================================= */
 @media screen and (max-width: 768px) {
-    .menu-btn {
-        display: flex;
-        z-index: 100;
-        cursor: pointer;
-    }
-    
+    /* ハンバーガーメニュー */
+    .menu-btn { display: flex; z-index: 100; cursor: pointer; }
     .menu-btn span, .menu-btn span:before, .menu-btn span:after {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 25px;
-        background-color: #ff5722;
-        position: absolute;
+        content: ''; display: block; height: 2px; width: 25px;
+        background-color: #ff5722; position: absolute;
     }
     .menu-btn span:before { bottom: 8px; }
     .menu-btn span:after { top: 8px; }
 
     .menu-content {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 100%;
-        width: 100%;
-        height: 100vh;
-        background: rgba(255,255,255,0.95);
-        padding-top: 80px;
-        transition: 0.5s;
+        position: fixed; top: 0; left: 100%; width: 100%; height: 100vh;
+        background: rgba(255,255,255,0.95); padding-top: 80px; transition: 0.5s;
     }
+    #menu-btn-check:checked ~ .menu-content { left: 0; }
 
-    #menu-btn-check:checked ~ .menu-content {
-        left: 0;
-    }
+    /* WORKSの折り返し */
+    .work-card { width: 100%; }
+    .modal-body { flex-direction: column; }
+    .modal-main-img, .modal-text { width: 100%; }
 }
-
-.section-title { text-align: center; font-size: 40px; }
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-.item img { width: 300px; border-radius: 10px; }
-
-
-
-
