@@ -207,6 +207,26 @@ header {
 .modal-text h3 { margin: 0 0 10px 0; font-size: 24px; }
 .modal-text p { line-height: 1.6; margin-top: 15px; }
 
+/* 画像グループを縦並びにする */
+.modal-images-group {
+  width: 50%; /* 全体の半分を画像エリアにする */
+  display: flex;
+  flex-direction: column; /* 中身を縦に並べる */
+  gap: 20px; /* 画像と画像の間隔 */
+}
+
+/* 画像自体のサイズ調整 */
+.modal-images-group .modal-main-img {
+  width: 100%; /* 親の幅いっぱいに広げる */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* テキストエリアの幅も合わせて調整（念のため） */
+.modal-text {
+  width: 50%;
+}
+
 /* =========================================
    5. スマホ対応
    ========================================= */
