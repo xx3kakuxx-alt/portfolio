@@ -1,16 +1,9 @@
-
 <!doctype html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="utf-8">
-<!-- TemplateBeginEditable name="doctitle" -->
-<title>portfolio</title>
-<!-- TemplateEndEditable -->
-<!-- TemplateBeginEditable name="head" -->
-<!-- TemplateEndEditable -->
-	
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,70 +23,81 @@
                 <li><a href="pop.html">POP類</a></li>
                 <li><a href="#">webページ</a></li>
                 <li><a href="#">SNS運営</a></li>
-				<li><a href="#">イラスト</a></li>
+                <li><a href="#">イラスト</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-		<div class="main_visual"><img src="nekonomiyaki.jpg" alt="作品1"></div>
-        <h2 class="section-title">works</h2>
-<section id="works">
-  <div class="inner">
-    <h2>WORKS</h2>
-    
-    <div class="works-container">
-      
-      <article class="work-card">
-        <button class="modal-open-btn" onclick="document.getElementById('modal01').showModal()">
-          <div class="work-image-wrapper">
-            <img src="path/to/your/thumbnail01.jpg" alt="POP01 サムネイル" class="work-thumb">
-          </div>
-          <div class="work-info-mini">
-            <h3 class="work-title">POP01</h3>
-            <div class="category-tags">
-              <span class="tag">web</span>
-            </div>
-          </div>
-        </button>
+        <div class="main_visual"><img src="nekonomiyaki.jpg" alt="作品1"></div>
+        
+        <section id="works">
+            <div class="inner">
+                <h2 class="section-title">WORKS</h2>
+                
+                <div class="works-container">
+                    
+                    <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal01').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="pop01_thumb.jpg" alt="POP01 サムネイル" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">POP01</h3>
+                                <div class="category-tags">
+                                    <span class="tag">web</span>
+                                </div>
+                            </div>
+                        </button>
 
-        <dialog id="modal01" class="work-modal">
-          <div class="modal-content">
-            <button class="modal-close-btn" onclick="document.getElementById('modal01').close()">×</button>
-            
-            <div class="modal-body">
-              <img src="path/to/your/large-image01.jpg" alt="POP01 詳細画像" class="modal-main-img">
-              <div class="modal-text">
-                <h3>POP01</h3>
-                <div class="category-tags">
-                  <span class="tag">web</span>
-                </div>
-                <p>作品の詳細な説明文がここに入ります。制作期間、使用ツールなど。</p>
-                <a href="#" class="btn-link">サイトを見る</a>
-              </div>
-            </div>
-          </div>
-        </dialog>
-      </article>
-      
-      <article class="work-card">
-        <button class="modal-open-btn" onclick="document.getElementById('modal02').showModal()">
-          </button>
-        <dialog id="modal02" class="work-modal">
-          </dialog>
-      </article>
+                        <dialog id="modal01" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal01').close()">×</button>
+                                <div class="modal-body">
+                                    <img src="pop01_large.jpg" alt="POP01 詳細画像" class="modal-main-img">
+                                    <div class="modal-text">
+                                        <h3>POP01</h3>
+                                        <div class="category-tags">
+                                            <span class="tag">web</span>
+                                        </div>
+                                        <p>ここに作品の解説文を入れます。<br>デザインのポイントや使用ソフトなど。</p>
+                                        <a href="#" class="btn-link">サイトを見る</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
 
-    </div></div></section>
-    </main>
-</body>
+                    <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal02').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="pop02_thumb.jpg" alt="POP02 サムネイル" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">POP02</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">POP</span>
+                                </div>
+                            </div>
+                        </button>
 
-
-</html>
-
-
-
-
-
-
-
-
+                        <dialog id="modal02" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal02').close()">×</button>
+                                <div class="modal-body">
+                                    <img src="pop02_large.jpg" alt="POP02 詳細画像" class="modal-main-img">
+                                    <div class="modal-text">
+                                        <h3>POP02</h3>
+                                        <div class="category-tags">
+                                            <span class="tag">イラスト</span>
+                                            <span class="tag">POP</span>
+                                        </div>
+                                        <p>2つ目の作品の解説文がここに入ります。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+                    
+                    </div></div></
