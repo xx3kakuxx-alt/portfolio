@@ -12,6 +12,21 @@ body {
     animation: fadeInUp 1.2s ease-out;
 }
 
+a {
+color:#ff5722;
+text-decoration:underline;
+}
+
+a:hover {
+color:#FFA500;
+text-decoration:underline;
+}
+
+a:visited {
+color:#FFA500;
+text-decoration:underline;
+}
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
