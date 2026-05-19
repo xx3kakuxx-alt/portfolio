@@ -228,7 +228,6 @@ header {
   width: 50%; /* 全体の半分を画像エリアにする */
   display: flex;
   flex-direction: column; /* 中身を縦に並べる */
-  gap: 20px; /* 画像と画像の間隔 */
 }
 
 .modal-images-group p {
