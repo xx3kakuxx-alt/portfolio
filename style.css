@@ -70,9 +70,6 @@ header {
     font-weight: bold;
 }
 
-/* =========================================
-   3. メインビジュアル・WORKSレイアウト
-   ========================================= */
 .main_visual {
     width: 100%;
     display: flex;
@@ -233,6 +230,7 @@ header {
 
 .modal-images-group p {
  text-align: left;
+margin: 0;
 }
 
 /* 画像自体のサイズ調整 */
