@@ -238,6 +238,7 @@ margin: 0;
   width: 100%; /* 親の幅いっぱいに広げる */
   height: auto;
   border-radius: 5px;
+   margin: 0;
 }
 
 /* テキストエリアの幅も合わせて調整（念のため） */
