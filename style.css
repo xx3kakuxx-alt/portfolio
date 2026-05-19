@@ -221,13 +221,14 @@ header {
 }
 
 .modal-text h3 { margin: 0 0 10px 0; font-size: 24px; }
-.modal-text p { line-height: 1.6; margin-top: 15px; }
+.modal-text p { line-height: 1.6; }
 
 /* 画像グループを縦並びにする */
 .modal-images-group {
   width: 50%; /* 全体の半分を画像エリアにする */
   display: flex;
   flex-direction: column; /* 中身を縦に並べる */
+   
 }
 
 .modal-images-group p {
