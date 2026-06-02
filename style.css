@@ -264,7 +264,8 @@ margin: 0 0 8px 0;
 @media screen and (max-width: 768px) {
     /* ハンバーガーメニュー */
     .menu-btn { display: flex; z-index: 100; cursor: pointer; }
-    .menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    .menu-btn span, .menu-btn span:before, .menu-btn span:after 
+    {
         content: ''; display: block; height: 2px; width: 25px;
         background-color: #ff5722; position: absolute;
     }
@@ -279,7 +280,48 @@ margin: 0 0 8px 0;
 
     /* WORKSの折り返し */
     .work-card { width: 100%; }
+
+    /* =========================================
+       ★ここからモーダルのスマホスクロール用修正
+       ========================================= */
+    
+    /* モーダルの外枠：高さを固定せず、はみ出したら全体をスクロールできるようにする */
+    .work-modal {
+        height: auto;
+        max-height: 90vh; /* 画面に収まるサイズ（お好みで100vhにしてもOK） */
+        overflow-y: auto;  /* モーダル全体の縦スクロールを許可 */
+    }
+
+    /* モーダルの内側：高さの固定を解除 */
+    .modal-content {
+        height: auto;
+        padding: 40px 20px 20px 20px; /* スマホ用に余白を少し調整 */
+    }
+
+    /* レイアウト：縦並び（文章が上、画像が下）にし、高さを自動にする */
     .modal-body { 
-        flex-direction: column-reverse; }
-    .modal-main-img, .modal-text { width: 100%; }
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* 文字エリア：固定やスクロールを一切無くし、100%表示 */
+    .modal-text {
+        width: 100%; 
+        height: auto;
+        overflow: visible; /* 文字の固定を解除 */
+    }
+
+    /* 画像グループ：固定や個別スクロールを完全に解除して縦に伸ばす */
+    .modal-images-group {
+        width: 100%; 
+        height: auto;
+        overflow: visible; /* 画像エリア単体でのスクロールを解除 */
+        padding-right: 0;  /* スクロールバー用の余白を無くす */
+    }
+
+    /* 画像自体のサイズ指定 */
+    .modal-main-img { 
+        width: 100%; 
+    }
 }
