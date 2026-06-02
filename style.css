@@ -178,6 +178,8 @@ header {
     max-width: 800px;
     width: 90%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    height: 85vh;
+    overflow: hidden;
 }
 
 .work-modal::backdrop {
@@ -187,6 +189,8 @@ header {
 .modal-content {
     position: relative;
     padding: 40px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .modal-close-btn {
@@ -198,12 +202,14 @@ header {
     font-size: 30px;
     color: #999;
     cursor: pointer;
+    z-index: 10;
 }
 
 .modal-body {
     display: flex;
     gap: 30px;
     align-items: flex-start;
+    height: calc(100% - 80px);
 }
 
 .modal-main-img {
@@ -222,15 +228,19 @@ header {
 
 /* 画像グループを縦並びにする */
 .modal-images-group {
-  width: 50%; /* 全体の半分を画像エリアにする */
+  width: 50%; 
   display: flex;
-  flex-direction: column; /* 中身を縦に並べる */
+  flex-direction: column; 
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 15px; 
+ box-sizing: border-box;
    
 }
 
 .modal-images-group p {
  text-align: left;
-margin: 0;
+margin: 0 0 8px 0;
 }
 
 /* 画像自体のサイズ調整 */
@@ -238,12 +248,13 @@ margin: 0;
   width: 100%; /* 親の幅いっぱいに広げる */
   height: auto;
   border-radius: 5px;
-   margin: 0;
+  margin-bottom: 24px;
 }
 
-/* テキストエリアの幅も合わせて調整（念のため） */
 .modal-text {
   width: 50%;
+  height: 100%;
+   overflow-y: hidden;
 }
 
 /* =========================================
