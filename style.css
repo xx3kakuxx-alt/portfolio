@@ -207,6 +207,7 @@ header {
 
 .modal-body {
     display: flex;
+    flex-direction: row-reverse;
     gap: 30px;
     align-items: flex-start;
     height: calc(100% - 80px);
