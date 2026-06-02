@@ -280,7 +280,6 @@ margin: 0 0 8px 0;
     /* WORKSの折り返し */
     .work-card { width: 100%; }
     .modal-body { 
-        flex-direction: column;
-        flex-direction: row-reverse; }
+        flex-direction: column-reverse; }
     .modal-main-img, .modal-text { width: 100%; }
 }
