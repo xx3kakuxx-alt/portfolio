@@ -53,8 +53,14 @@ header {
     padding: 20px 40px;
 }
 
-.logo h1 { margin: 0; font-size: 20px; }
-.logo p { margin: 0; font-size: 14px; }
+.logo h1 { 
+    margin: 0; 
+    font-size: 20px; 
+}
+.logo p { 
+    margin: 0; 
+    font-size: 14px; 
+}
 
 .menu-content {
     display: flex;
@@ -266,11 +272,13 @@ margin: 0 0 8px 0;
     .menu-btn 
     { 
         display: flex; 
-        z-index: 100; 
+        z-index: 9999; 
         cursor: pointer; 
         position: absolute; 
         right: 35px;
         top: 30px;
+        width: 30px; 
+        height: 30px; 
     }
     .menu-btn span, .menu-btn span:before, .menu-btn span:after 
     {
