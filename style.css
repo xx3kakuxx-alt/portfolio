@@ -247,6 +247,7 @@ header {
    
 }
 
+
 .modal-images-group p {
  text-align: left;
 margin: 0 0 8px 0;
@@ -260,6 +261,9 @@ margin: 0 0 8px 0;
   margin-bottom: 24px;
 }
 
+.modal-images-group instagram-group {
+    display: block;
+}
 .modal-text {
   width: 50%;
   height: 100%;
@@ -309,7 +313,7 @@ margin: 0 0 8px 0;
         flex-direction: column; 
         justify-content: center; 
         align-items: center; 
-
+        transition: left 0.5s ease;
         gap: 30px;
         padding-top: 0;
     }
@@ -386,4 +390,8 @@ _}
 
 .category-tags{
     display: block;
+}
+
+.tag{
+    margin: 2px;
 }
