@@ -51,6 +51,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo h1 { 
@@ -297,7 +299,8 @@ margin: 0 0 8px 0;
     }
 
     .menu-content {
-        position: fixed; 
+        position: fixed;
+        z-index: 9000;
         top: 0; 
         left: 100%; 
         width: 100%; 
@@ -305,9 +308,13 @@ margin: 0 0 8px 0;
         background: rgba(255,255,255,0.95); 
         padding-top: 80px; transition: 0.5s;
     }
-    #menu-btn-check:checked ~ .menu-content { 
+    #menu-btn-check:checked ~ .nav-container .menu-content { 
         left: 0; 
     }
+
+    #menu-btn-check {
+    display: none;
+}
 
     /* WORKSの折り返し */
     .work-card {
