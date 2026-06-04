@@ -57,7 +57,9 @@ header {
 
 .logo h1 { 
     margin: 0; 
-    font-size: 20px; 
+    font-size: 20px;
+    color: inherit; 
+    text-decoration: none;
 }
 .logo p { 
     margin: 0; 
@@ -95,28 +97,25 @@ header {
 .section-title {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 30px;
+
 }
 
-/* 作品を包む親要素（3列に並べる） */
 .works-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 20px; /* 縦・横の隙間 */
+    gap: 40px 20px;
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 各作品カード */
 .work-card {
-    width: calc((100% - 40px) / 3); /* 3列計算 */
+    width: calc((100% - 40px) / 3); 
     min-width: 280px;
     margin-bottom: 20px;
 }
 
-/* サムネイルを開くボタン */
 .modal-open-btn {
     background: none;
     border: none;
@@ -127,15 +126,14 @@ header {
     font-family: inherit;
 }
 
-/* 画像枠（2枚目のデザイン：クリーム色の部分） */
 .work-image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-bottom: 15px;
     overflow: hidden;
     border-radius: 5px;
-   border: 2px solid #ff5722; /* 太さ 3px、種類 実線、色 オレンジ */
-  box-sizing: border-box;    /* 枠線を内側に含める設定（崩れ防止） */
+   border: 2px solid #ff5722; 
+  box-sizing: border-box;
 }
 
 .work-thumb {
@@ -149,7 +147,6 @@ header {
     transform: scale(1.05);
 }
 
-/* 作品タイトル（下線あり） */
 .work-title {
     font-size: 20px;
     color: #333;
@@ -159,7 +156,6 @@ header {
     border-bottom: 2px solid #ff5722; 
 }
 
-/* カテゴリタグ（サイトのオレンジに合わせる） */
 .category-tags {
     display: flex;
     gap: 5px;
@@ -167,7 +163,7 @@ header {
 }
 
 .tag {
-    background-color: #ff5722; /* サイト全体のオレンジと統一 */
+    background-color: #ff5722; 
     color: #fff;
     padding: 2px 12px;
     border-radius: 15px;
@@ -272,7 +268,8 @@ margin: 0 0 8px 0;
 padding: 5%;    
 }
 .profile_text{
-font-size: 8px;
+font-size: 3em;
+text-align: center;
 }
 
 /* =========================================
