@@ -214,11 +214,10 @@ header {
 }
 
 .modal-body {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 30px;
-    align-items: flex-start;
-    height: calc(100% - 80px);
+ flex-direction: column-reverse;
+ height: auto;
+  gap: 20px;
+height: calc(100% - 80px);
 }
 
 .modal-body.video-modal {
