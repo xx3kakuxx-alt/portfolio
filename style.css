@@ -186,8 +186,9 @@ header {
     max-width: 800px;
     width: 90%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    height: 85vh;
-    overflow: hidden;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .work-modal::backdrop {
@@ -197,7 +198,7 @@ header {
 .modal-content {
     position: relative;
     padding: 40px;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
 }
 
@@ -232,7 +233,9 @@ header {
 }
 
 .modal-text {
-    color: #333; /* ポップアップ内は読みやすく暗めの色に */
+    color: #333;
+     height: auto;
+   overflow-y: hidden;
 }
 
 .modal-text h3 { margin: 0 0 10px 0; font-size: 24px; }
@@ -240,16 +243,14 @@ header {
 
 
 .modal-images-group {
-  width: 50%; 
   display: flex;
   flex-direction: column; 
   padding-right: 15px; 
  box-sizing: border-box;
- height: 300px;
+ height: auto;
   overflow-y: scroll;
 }
-   
-}
+
 
 
 .modal-images-group p {
@@ -257,9 +258,8 @@ header {
 margin: 0 0 8px 0;
 }
 
-/* 画像自体のサイズ調整 */
 .modal-images-group .modal-main-img {
-  width: 100%; /* 親の幅いっぱいに広げる */
+  width: 100%; 
   height: auto;
   border-radius: 5px;
   margin-bottom: 24px;
@@ -267,11 +267,6 @@ margin: 0 0 8px 0;
 
 .modal-images-group instagram-group {
     display: block;
-}
-.modal-text {
-  width: 50%;
-  height: 100%;
-   overflow-y: hidden;
 }
 
 /* =========================================
