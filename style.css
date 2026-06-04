@@ -214,10 +214,11 @@ header {
 }
 
 .modal-body {
- flex-direction: column-reverse;
+ display: flex !important;
+  flex-direction: column-reverse !important;
  height: auto;
   gap: 20px;
-height: calc(100% - 80px);
+  
 }
 
 .modal-body.video-modal {
@@ -226,13 +227,11 @@ height: calc(100% - 80px);
 
 
 .modal-main-img {
-    width: 50%;
     height: auto;
     border-radius: 5px;
 }
 
 .modal-text {
-    width: 50%;
     color: #333; /* ポップアップ内は読みやすく暗めの色に */
 }
 
