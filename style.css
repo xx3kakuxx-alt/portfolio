@@ -221,6 +221,19 @@ header {
     height: calc(100% - 80px);
 }
 
+.modal-body.video-modal {
+    display: block;
+}
+
+.modal-body.video-modal .modal-images-group {
+    width: 100%;
+}
+
+.modal-body.video-modal .modal-text {
+    width: 100%;
+    margin-top: 30px;
+}
+
 .modal-main-img {
     width: 50%;
     height: auto;
