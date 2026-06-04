@@ -264,12 +264,21 @@ margin: 0 0 8px 0;
     display: block;
 }
 
-.section-title{
-padding: 5%;    
+.profile_title{
+    text-align: center;
+    font-size: 2em;
+    padding: 5%;    
+}
+
+.profile_yomi{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 5%;    
 }
 .profile_text{
-font-size: 3em;
+font-size: 1em;
 text-align: center;
+padding: 5%;
 }
 
 /* =========================================
