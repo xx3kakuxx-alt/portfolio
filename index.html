@@ -912,6 +912,21 @@
                             </div>
                         </dialog>
                     </article>      
+
+                    
   
                     
   
+<script>
+        // 背景クリックでモーダルを閉じるJavaScript
+        document.querySelectorAll('.work-modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                // クリックされた位置がモーダルの外側（背景）だったら閉じる
+                if (e.target === modal) {
+                    modal.close();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
