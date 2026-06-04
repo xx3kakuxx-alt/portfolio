@@ -239,8 +239,12 @@ header {
    overflow-y: hidden;
 }
 
-.modal-text h3 { margin: 0 0 10px 0; font-size: 24px; }
-.modal-text p { line-height: 1.6; }
+.modal-text h3 { 
+    margin: 0 0 10px 0; font-size: 24px; 
+}
+.modal-text p { 
+    line-height: 1.6; 
+}
 
 
 .modal-images-group {
@@ -272,13 +276,13 @@ margin: 0 0 8px 0;
 .profile_title{
     text-align: center;
     font-size: 2em;
-    padding: 5%;    
+    padding: 2%;    
 }
 
 .profile_yomi{
     text-align: center;
     font-size: 1.2em;
-    padding: 5%;    
+    padding: 2%;    
 }
 .profile_text{
 font-size: 1em;
