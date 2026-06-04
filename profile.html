@@ -1,50 +1,47 @@
 <!doctype html>
-<html>
-	<body>
-
-
-		<head>
-<meta charset="utf-8">
-<!-- TemplateBeginEditable name="doctitle" -->
-<title>portfolio</title>
-<!-- TemplateEndEditable -->
-<!-- TemplateBeginEditable name="head" -->
-<!-- TemplateEndEditable -->
-	
-	<meta charset="utf-8">
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
     <title>portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
     <header>
         <div class="logo">
             <h1>portfolio</h1>
             <p>name</p>
         </div>
 
+        <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn">
+                <span></span>
+            </label>
         <nav class="nav-container">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
             
             <ul class="menu-content">
-                <li><a href="#">私について</a></li>
-                <li><a href="#">POP類</a></li>
-                <li><a href="#">webページ</a></li>
-                <li><a href="#">SNS運営</a></li>
-				<li><a href="#">イラスト</a></li>
+                <li><a href="profile.html">私について</a></li>
+                <li><a href="pop.html">webデザイン</a></li>
+                <li><a href="#">POP</a></li>
+                <li><a href="#">メニュー</a></li>
+                <li><a href="#">ノベルティ</a></li>
+                <li><a href="#">SNS</a></li>
+                <li><a href="#">動画作成</a></li>
+                <li><a href="#">イラスト</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-		<div class="main_visual"><img src="nekonomiyaki.jpg" alt="作品1"></div>
-		
-        <h2 class="section-title">works</h2>
-        <div class="gallery">
-            <div class="item"><img src="image1.jpg" alt="作品1"></div>
-            <div class="item"><img src="image2.jpg" alt="作品2"></div>
-            <div class="item"><img src="image3.jpg" alt="作品3"></div>
-        </div>
-    </main>
-</body>
-</html>
-
+        <div class="main_visual"><img src="nekonomiyaki.jpg" alt="作品1"></div>
+        <section id="profile">
+            <div class="inner">
+                <h2 class="section-title">藤原 ありす/h2>
+                <p>fujihara arisu</p>
+                <p>1990年生まれ。福岡県出身、大阪市在住。<br>
+                    ゲーム会社でのイラスト作成業務を経て、現在は飲食店を運営している会社でデザイナーとして勤務中。<br>
+                    デザインやイラスト、web制作、SNS運用、動画制作まで幅広く対応。</p>
+            </div>
+        </section>
