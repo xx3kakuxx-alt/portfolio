@@ -55,7 +55,7 @@ header {
     z-index: 1000;
 }
 
-.logo h1 { 
+.logo h1 a { 
     margin: 0; 
     font-size: 20px;
     color: inherit; 
