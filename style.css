@@ -86,14 +86,14 @@ header {
 }
 
 .main_visual {
-    max-width: 850px;
+    max-width: 715px;
     display: flex;
-    margin-bottom: 40px;
     margin: auto;
+    gap: 0 10px;
 }
 
 .main_visual img {
-    width: 150px;
+    width: 135px;
     height: auto;
     display: block;
 }
