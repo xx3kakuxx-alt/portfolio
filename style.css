@@ -96,6 +96,7 @@ header {
 .main_visual_illustration{
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 .main_visual_illustration img{
@@ -368,6 +369,7 @@ padding: 2%;
      max-width: 100%;
      height: auto;
      display: block;
+     margin: 0 auto;
 }
 
     /* WORKSの折り返し */
