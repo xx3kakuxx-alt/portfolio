@@ -88,13 +88,12 @@ header {
 .main_visual {
     max-width: 850px;
     display: flex;
-    justify-content: center;
     margin-bottom: 40px;
+    margin: auto;
 }
 
 .main_visual img {
     width: 150px;
-    max-width: 800px;
     height: auto;
     display: block;
 }
