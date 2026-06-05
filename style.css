@@ -102,6 +102,10 @@ header {
     width: 135px;
 }
 
+.main_visual_text{
+     margin: 0 auto;
+}
+
 .section-title {
     text-align: center;
     font-size: 40px;
@@ -346,6 +350,18 @@ padding: 2%;
 
     #menu-btn-check {
     display: none;
+}
+
+
+.main_visual {
+    width: 500px;
+    margin: 0 auto;
+    gap: 0 10px;
+}
+
+
+.main_visual_illustration img{
+    width: 100px;
 }
 
     /* WORKSの折り返し */
