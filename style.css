@@ -93,7 +93,7 @@ header {
 }
 
 .main_visual img {
-    width: 100%;
+    width: 150px;
     max-width: 800px;
     height: auto;
     display: block;
