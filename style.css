@@ -364,9 +364,10 @@ padding: 2%;
     width: 80px;
 }
 
-.main_visual_text{
+.main_visual_text img{
      max-width: 100%;
      height: auto;
+     display: block;
 }
 
     /* WORKSの折り返し */
