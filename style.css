@@ -86,7 +86,7 @@ header {
 }
 
 .main_visual {
-    width: 100%;
+    max-width: 850px;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
