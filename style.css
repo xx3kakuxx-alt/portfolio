@@ -94,9 +94,12 @@ header {
 }
 
 .main_visual_illustration{
-    width: 135px;
     height: auto;
     display: block;
+}
+
+.main_visual_illustration img{
+    width: 135px;
 }
 
 .section-title {
