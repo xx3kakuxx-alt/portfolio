@@ -86,13 +86,14 @@ header {
 }
 
 .main_visual {
-    max-width: 715px;
+    width: 715px;
+    margin: 0 auto;
     display: flex;
-    margin: auto;
+    flex-direction: column;
     gap: 0 10px;
 }
 
-.main_visual img {
+.main_visual_illustration{
     width: 135px;
     height: auto;
     display: block;
@@ -286,7 +287,7 @@ margin: 0 0 8px 0;
 .profile_text{
 font-size: 1em;
 text-align: center;
-padding: 5%;
+padding: 2%;
 }
 
 /* =========================================
