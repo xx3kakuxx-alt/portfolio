@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+             <h1><a href="index.html">portfolio</a></h1>
+            <p>fujihara arisu</p>
+        </div>
+
+        <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn">
+                <span></span>
+            </label>
+        <nav class="nav-container">
+
+            
+            <ul class="menu-content">
+                <li><a href="profile.html">私について</a></li>
+                <li><a href="web.html">webデザイン</a></li>
+                <li><a href="pop.html">POP</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="novelty.html">ノベルティ</a></li>
+                <li><a href="sns.html">SNS</a></li>
+                <li><a href="video.html">動画作成</a></li>
+                <li><a href="illustration.html">イラスト</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main_visual">
+            <div class="main_visual_illustration">
+                <img src="main_visual_mini01.png" alt="メインビジュアル01">
+                <img src="main_visual_mini02.png" alt="メインビジュアル02">
+                <img src="main_visual_mini03.png" alt="メインビジュアル03">
+                <img src="main_visual_mini04.png" alt="メインビジュアル04">
+                <img src="main_visual_mini05.png" alt="メインビジュアル05">
+            </div>
+                    <div class="main_visual_text">
+                        <img src="portfolio.png" alt="メインビジュアル">
+                    </div>
+            <div class="main_visual_illustration">
+                <img src="main_visual_mini06.png" alt="メインビジュアル06">
+                <img src="main_visual_mini07.png" alt="メインビジュアル07">
+                <img src="main_visual_mini08.png" alt="メインビジュアル08">
+                <img src="main_visual_mini09.png" alt="メインビジュアル09">
+                <img src="main_visual_mini10.png" alt="メインビジュアル10">
+            </div>
+        </div>
+    </main>
+        <section id="works">
+            <div class="inner">
+                <h2 class="section-title">WORKS</h2>
+                
+                <div class="works-container">
+
+
+
+
+                    <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal08').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="nov_don_01.jpg" alt="うちわ・クリアファイル・Tシャツ等ノベルティ作成" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">うちわ・クリアファイル・Tシャツ等ノベルティ作成</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">ノベルティ</span>
+                                    <span class="tag">その他</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal08" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal08').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+				<p>うちわ</p>
+                                    <img src="nov_don_01.jpg" alt="詳細画像1" class="modal-main-img">
+				<p>クリアファイル</p>
+                                    <img src="nov_don_02.jpg" alt="詳細画像2" class="modal-main-img">
+                <p>Tシャツ</p>
+                                    <img src="nov_don_03.jpg" alt="詳細画像3" class="modal-main-img">
+                                    </div>
+                                
+                                  <div class="modal-text">
+                                    <h3>うちわ・クリアファイル・Tシャツ等ノベルティ作成</h3>
+                                    <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">その他</span>
+                                    </div>
+                                    <p>お好み焼き専門店「どんどん亭」のノベルティ作成。
+                                        ソフトバンクホークスとコラボして店舗で配布したうちわ(左)がご好評いただき早期配布終了したため、
+                                        臨時で円形うちわ(右)も作成した。<br>
+                                        イラスト作成で携わったTシャツは九州各地のご当地Tシャツを多数手がける「ローカルＴシャツ」より販売中。<br>
+                                        <a href="https://local-t.com/products/dondontei" class="btn-link">販売ページはこちら</a>
+                                    </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+                    
+                    <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal01').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="nenga2022.jpg" alt="POP01 サムネイル" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">会社用年賀状</h3>
+                                <div class="category-tags">
+                                    <span class="tag">POP</span><span class="tag">イラスト</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal01" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal01').close()">×</button>
+                                <div class="modal-body">
+                                    <img src="nenga2022.jpg" alt="POP01 詳細画像" class="modal-main-img">
+                                    <div class="modal-text">
+                                        <h3>会社用年賀状</h3>
+                                        <div class="category-tags">
+                                            <span class="tag">POP</span><span class="tag">イラスト</span>
+                                        </div>
+                                        <p>会社用の年賀状作成。<br>さまざまな業態の飲食店を運営しているので、全業態のメニューのイラストを作成して、オリジナリティあふれる年賀状を目指した。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+
+                   
+                       <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal03').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="gen_grand_menu.jpg" alt="POP02 サムネイル" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">「そば茶屋華元・本膳庵」メニュー</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">メニュー</span>
+                                    <span class="tag">POP</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal03" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal03').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+                                    <img src="gen_grand_menu.jpg" alt="詳細画像1" class="modal-main-img"><br>
+                                    <img src="gen_grand_menu_illusut.jpg" alt="詳細画像2" class="modal-main-img">
+                                    <img src="gen_grand02.jpg" alt="詳細画像3" class="modal-main-img">
+                                    <img src="gen_grand04.jpg" alt="詳細画像4" class="modal-main-img">
+                                    </div>
+                                
+                                  <div class="modal-text">
+                                    <h3>「そば茶屋華元・本膳庵」メニュー</h3>
+                                    <div class="category-tags">
+                                      <span class="tag">イラスト</span>
+                                      <span class="tag">メニュー</span>
+                                    </div>
+                                    <p>そば専門店「本膳庵」「華元」のメニュー作成。<br>
+                                    そば屋らしい和風な雰囲気と高級感を出しつつ、写真やイラストも入れてメニューの詳細が分かりやすいようにした。</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+    
+
+                                   <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal18').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="movie_3syoku.jpg" alt="お好み焼き専門店「どんどん亭」メニュー紹介ショート動画制作" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">お好み焼き専門店「どんどん亭」メニュー紹介ショート動画制作</h3>
+                                <div class="category-tags">
+                                    <span class="tag">動画制作</span>
+                                    <span class="tag">イラスト</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal18" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal18').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+                                    <p>お好み焼き紹介動画「三色玉」</p>
+                                    <iframe width="315" height="560"
+  src="https://www.youtube.com/embed/ropQRhk3FPE"
+  title="YouTube Shorts"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+                                    </div>
+                                
+                                  <div class="modal-text">
+                                    <h3>お好み焼き専門店「どんどん亭」メニュー紹介ショート動画制作</h3>
+                                    <div class="category-tags">
+                                      <span class="tag">動画制作</span>
+                                      <span class="tag">イラスト</span>
+                                    </div>
+                                    <p>「お好み焼き総選挙」という企画を行った際に全21種類のお好み焼きを紹介するショート動画を作成した。<br>
+                                        コーポレートキャラクターがそれぞれのお好み焼きの良さをアピールする内容になっている。<br>
+                                       <a href="https://www.youtube.com/@dondontei_pr/shorts" class="btn-link">すべての動画はこちら</a><br>
+                                    </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article> 
+                    
+                    <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal20').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="negi_menu.png" alt="メニュー用イラスト作成" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">居酒屋「牛すじ葱丸」メニュー・イラスト作成</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">メニュー</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal20" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal20').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+                                    <p>居酒屋「牛すじ葱丸」メニュー・イラスト作成</p>
+                                    <img src="negi_menu.png" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="negi_ill_01.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="negi_ill_02.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="negi_ill_03.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="negi_ill_04.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                  </div>
+                                  <div class="modal-text">
+                                    <h3>居酒屋「牛すじ葱丸」メニュー・イラスト作成</h3>
+                                    <div class="category-tags">
+                                      <span class="tag">イラスト</span>
+                                      <span class="tag">メニュー</span>
+                                    </div>
+                                    <p>メニューに使用したり店舗に貼るためのPOP用イラストを作成した。<br>
+                                    メニューの魅力を引き出すことを目指した。<br>
+                                    </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>      
+
+
+                     <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal19').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="hedar.jpg" alt="メニュー用イラスト作成" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">メニュー用イラスト作成</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal19" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal19').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+                                    <p>メニュー用イラスト作成</p>
+                                    <img src="hedar.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="illu_oko.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                    <img src="illu_soba_2.jpg" alt="メニュー用イラスト" class="modal-main-img">
+                                  </div>
+                                  <div class="modal-text">
+                                    <h3>メニュー用イラスト作成</h3>
+                                    <div class="category-tags">
+                                      <span class="tag">イラスト</span>
+                                    </div>
+                                    <p>メニューに使用したりSNSに投稿するためのイラストを作成した。<br>
+                                    メニューの魅力を引き出すことを目指した。<br>
+                                    </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>      
+
+                          <article class="work-card">
+                        <button class="modal-open-btn" onclick="document.getElementById('modal07').showModal()">
+                            <div class="work-image-wrapper">
+                                <img src="nov_jyake01.jpg" alt="結婚式ペーパーアイテム" class="work-thumb">
+                            </div>
+                            <div class="work-info-mini">
+                                <h3 class="work-title">結婚式ペーパーアイテム</h3>
+                                <div class="category-tags">
+                                    <span class="tag">イラスト</span>
+                                    <span class="tag">ノベルティ</span>
+                                    <span class="tag">その他</span>
+                                </div>
+                            </div>
+                        </button>
+
+                        <dialog id="modal07" class="work-modal">
+                            <div class="modal-content">
+                                <button class="modal-close-btn" onclick="document.getElementById('modal07').close()">×</button>
+                              <div class="modal-body">
+                                  <div class="modal-images-group">
+				<p>CD風プロフィールブック</p>
+                                    <img src="nov_jyake01.jpg" alt="詳細画像1" class="modal-main-img">
+                                    <img src="nov_jyake02.jpg" alt="詳細画像2" class="modal-main-img">
+
+                                    <img src="nov_cd_naka02.jpg" alt="詳細画像2" class="modal-main-img">
+                                    				<p>個別イラスト入り席札</p>
+                                    <img src="nov_es.jpg" alt="詳細画像2" class="modal-main-img">
+                                    				<p>チケット風エスコートカード</p>
+                                    <img src="nov_ticket.jpg" alt="詳細画像2" class="modal-main-img">
+                                    </div>
+                                
+                                  <div class="modal-text">
+                                    <h3>結婚式ペーパーアイテム</h3>
+                                    <div class="category-tags">
+                                        <span class="tag">イラスト</span>
+                                        <span class="tag">ノベルティ</span>
+                                        <span class="tag">その他</span>
+                                    </div>
+                                    <p>自身の結婚式のペーパーアイテムを作成。<br>
+                                        お互いアイドルが好きなのでコンサート風のコンセプトにして、プロフィールブックはCD風、<br>
+                                        席札はゲストそれぞれの好きなもののイラストを用いた音楽サブスク風、エスコートカードはチケット風にした。<br>
+                                    </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+                    
+  
+                    
+  
+<script>
+        // 背景クリックでモーダルを閉じるJavaScript
+        document.querySelectorAll('.work-modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                // クリックされた位置がモーダルの外側（背景）だったら閉じる
+                if (e.target === modal) {
+                    modal.close();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
