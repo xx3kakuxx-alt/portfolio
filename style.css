@@ -430,6 +430,18 @@ padding: 2%;
 
 @media screen and (max-width: 480px) {
 
+    .main_visual {
+    width: 350px;
+    gap: 0 10px;
+}
+
+
+.main_visual_illustration img{
+    width: 60px;
+}
+
+    
+
     .works-container {
     padding: 5px;
 }
