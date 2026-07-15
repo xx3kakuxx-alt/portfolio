@@ -6,9 +6,8 @@
 body {
     margin: 0;
     padding: 0;
-    /* フォントを統一 */
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: #ff5722; /* サイトの基本オレンジ色 */
+    color: #ff5722;
     animation: fadeInUp 1.2s ease-out;
 }
 
@@ -386,17 +385,16 @@ padding-bottom: 5%;
        ★ここからモーダルのスマホスクロール用修正
        ========================================= */
     
-    /* モーダルの外枠：高さを固定せず、はみ出したら全体をスクロールできるようにする */
     .work-modal {
         height: auto;
-        max-height: 90vh; /* 画面に収まるサイズ（お好みで100vhにしてもOK） */
-        overflow-y: auto;  /* モーダル全体の縦スクロールを許可 */
+        max-height: 90vh; 
+        overflow-y: auto; 
     }
 
     /* モーダルの内側：高さの固定を解除 */
     .modal-content {
         height: auto;
-        padding: 40px 20px 20px 20px; /* スマホ用に余白を少し調整 */
+        padding: 40px 20px 20px 20px; 
     }
 
     /* レイアウト：縦並び（文章が上、画像が下）にし、高さを自動にする */
@@ -410,15 +408,15 @@ padding-bottom: 5%;
     .modal-text {
         width: 100%; 
         height: auto;
-        overflow: visible; /* 文字の固定を解除 */
+        overflow: visible; 
     }
 
     /* 画像グループ：固定や個別スクロールを完全に解除して縦に伸ばす */
     .modal-images-group {
         width: 100%; 
         height: auto;
-        overflow: visible; /* 画像エリア単体でのスクロールを解除 */
-        padding-right: 0;  /* スクロールバー用の余白を無くす */
+        overflow: visible; 
+        padding-right: 0;  
     }
 
     /* 画像自体のサイズ指定 */
@@ -434,13 +432,9 @@ padding-bottom: 5%;
     gap: 0 10px;
 }
 
-
 .main_visual_illustration img{
     width: 60px;
 }
-
-    
-
     .works-container {
     padding: 5px;
 }
