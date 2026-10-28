@@ -256,8 +256,9 @@ header {
 
 .modal-images-group img:not(.no-limit) {
       max-height: 400px;
-      object-fit: cover;
-    }
+width: auto;
+  object-fit: contain;
+}
 
 
 .modal-images-group {
