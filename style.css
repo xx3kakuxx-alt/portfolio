@@ -70,6 +70,7 @@ header {
     font-size: 14px; 
 }
 
+
 .menu-content {
     display: flex;
     list-style: none;
@@ -252,6 +253,11 @@ header {
 .modal-text p { 
     line-height: 1.6; 
 }
+
+.modal-images-group img:not(.no-limit) {
+      max-height: 400px;
+      object-fit: cover;
+    }
 
 
 .modal-images-group {
